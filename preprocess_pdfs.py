@@ -33,11 +33,14 @@ def clean_text(text):
 
 # Remove content after "References"
 def remove_references(text):
+    # Define keywords and look for them at the start of a line
     reference_keywords = ['references', 'bibliography']
-    pattern = re.compile(r'|'.join(reference_keywords), re.IGNORECASE)
+    pattern = re.compile(r'^\s*(references|bibliography)\b', re.IGNORECASE | re.MULTILINE)
+    
     match = pattern.search(text)
     if match:
         text = text[:match.start()]
+    
     return text
 
 # Extract main and section titles
