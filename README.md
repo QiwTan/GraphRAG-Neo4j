@@ -2,6 +2,7 @@
 
 This repository provides a pipeline for processing, uploading, and querying scientific literature in PDF format. The pipeline extracts entities and relationships from the literature and stores them in a Neo4j knowledge graph for retrieval and analysis.
 
+![Structure of GraphRAG](structure.jpg)
 ## Features
 
 1. **PDF Preprocessing**:
